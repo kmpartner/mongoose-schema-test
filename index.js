@@ -1,8 +1,9 @@
-// const TestSchema = require('./models/test');
-
+const Test = require('./models/test');
+const Test2 = require('./models/test2');
 // const indexTest = 'index-test';
 // console.log('TestSchema', TestSchema, typeof(TestSchema));
 // console.log('indexTest', indexTest);
+
 
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
@@ -23,7 +24,12 @@ const test2Schema = new Schema({
 
 // module.exports = mongoose.model('Test', testSchema);
 
+// module.exports = {
+//   Test: mongoose.model('Test', testSchema),
+//   Test2: mongoose.model('Test2', test2Schema),
+// }
+
 module.exports = {
-  Test: mongoose.model('Test', testSchema),
-  Test2: mongoose.model('Test2', test2Schema),
+  Test: Test,
+  Test2: Test2,
 }
