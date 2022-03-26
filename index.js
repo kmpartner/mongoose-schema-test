@@ -23,7 +23,7 @@ const test2Schema = new Schema({
 
 // module.exports = mongoose.model('Test', testSchema);
 
-module.export = {
+module.exports = {
   Test: mongoose.model('Test', testSchema),
   Test2: mongoose.model('Test2', test2Schema),
 }
