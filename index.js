@@ -14,4 +14,16 @@ const testSchema = new Schema({
 { timestamps: true }
 )
 
-module.exports = mongoose.model('Test', testSchema);
+const test2Schema = new Schema({
+  name2: { type: String },
+  age2: { type: Number},
+},
+{ timestamps: true }
+)
+
+// module.exports = mongoose.model('Test', testSchema);
+
+module.export = {
+  Test: mongoose.model('Test', testSchema),
+  Test2: mongoose.model('Test2', test2Schema),
+}
